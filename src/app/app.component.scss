@@ -1,0 +1,31 @@
+h1 {
+    font-size: 3.125rem;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+}
+
+main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    margin-top: 1.75rem;
+}
+
+@media screen and (max-width: 650px) {
+    .content {
+        flex-direction: column;
+        width: max-content;
+    }
+}
