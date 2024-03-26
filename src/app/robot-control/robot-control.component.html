@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="table">
+        <div class="robot" [style.left.px]="x * 50" [style.bottom.px]="y * 50">
+          <span class="direction">{{ direction }}</span>
+        </div>
+      </div>
+    <div class="controls">
+        <div>
+            <label>X:</label>
+            <input type="number" [(ngModel)]="x" />
+        </div>
+        <div>
+            <label>Y:</label>
+            <input type="number" [(ngModel)]="y" />
+        </div>
+        <div>
+            <label>Direction:</label>
+            <input type="text" [(ngModel)]="direction" />
+        </div>
+        <button (click)="placeRobot()">Place Robot</button>
+        <button (click)="moveRobot()">Move Robot</button>
+        <button (click)="turnLeft()">Turn Left</button>
+        <button (click)="turnRight()">Turn Right</button>
+        <button (click)="getReport()">Report</button>
+        <div *ngIf="report">
+            <p>Robot Position: {{ report.x }}, {{ report.y }}</p>
+            <p>Robot Direction: {{ report.direction }}</p>
+        </div>
+    </div>
+</div>
