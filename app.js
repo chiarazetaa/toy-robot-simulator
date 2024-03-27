@@ -10,9 +10,13 @@ app.use(cors());
 
 // Define routes for robot commands
 app.post('/place', (req, res) => {
-    // Logic for PLACE command
-    console.log('PLACE command received:', req.body);
-    res.sendStatus(200);
+    try {
+        console.log('PLACE command received:', req.body);
+        res.status(200).send({res: 'OK'});
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 app.post('/move', (req, res) => {

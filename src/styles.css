@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2007d;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}

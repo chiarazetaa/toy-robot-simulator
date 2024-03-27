@@ -1,30 +1,31 @@
+<p>Place and move the robot</p>
 <div class="container">
     <div class="table">
-        <div class="robot" [style.left.px]="x * 50" [style.bottom.px]="y * 50">
-          <span class="direction">{{ direction }}</span>
+        <div class="robot" *ngIf="robotPlaced" [style.left.px]="x * 50" [style.bottom.px]="y * 50">
+            <span class="direction">{{ direction }}</span>
         </div>
-      </div>
+    </div>
     <div class="controls">
-        <div>
+        <div class="commands">
             <label>X:</label>
             <input type="number" [(ngModel)]="x" />
         </div>
-        <div>
+        <div class="commands">
             <label>Y:</label>
             <input type="number" [(ngModel)]="y" />
         </div>
-        <div>
+        <div class="commands">
             <label>Direction:</label>
             <input type="text" [(ngModel)]="direction" />
         </div>
         <button (click)="placeRobot()">Place Robot</button>
-        <button (click)="moveRobot()">Move Robot</button>
-        <button (click)="turnLeft()">Turn Left</button>
-        <button (click)="turnRight()">Turn Right</button>
-        <button (click)="getReport()">Report</button>
-        <div *ngIf="report">
-            <p>Robot Position: {{ report.x }}, {{ report.y }}</p>
-            <p>Robot Direction: {{ report.direction }}</p>
-        </div>
+        <button (click)="moveRobot()" *ngIf="robotPlaced">Move Robot</button><br>
+        <button (click)="turnLeft()" *ngIf="robotPlaced">Turn Left</button>
+        <button (click)="turnRight()" *ngIf="robotPlaced">Turn Right</button>
+        <button (click)="getReport()" *ngIf="robotPlaced">Report</button>
     </div>
+</div>
+<div *ngIf="report">
+    <p>Robot Position: {{ report.x }}, {{ report.y }}</p>
+    <p>Robot Direction: {{ report.direction }}</p>
 </div>

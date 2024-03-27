@@ -1,6 +1,10 @@
 .container {
     display: flex;
     align-items: center;
+    border-radius: 16px;
+    background-color: #abdcea;
+    padding: 2em;
+    height: 400px;
 }
 
 .table {
@@ -29,4 +33,30 @@
 
 .controls {
     margin-left: 20px;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    margin: 10px 15px;
+    border: none;
+}
+
+button:hover {
+    box-shadow: 0 0 0 5px #000000, inset 0 0 0 1px #fff;
+}
+
+.commands {
+    margin: 10px 15px;
+}
+
+input {
+    padding: 0.1em;
+    font-family: "VT323", monospace;
+    font-size: x-large;
+    width: 100%;
+    margin-bottom: 1em;
 }
