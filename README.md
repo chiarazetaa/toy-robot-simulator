@@ -44,5 +44,5 @@ A simple Angular application simulating a toy robot moving on a tabletop.
 
 ## Contact Information
 Your Name
-- Email: your-email@example.com
-- GitHub: [Your GitHub Profile](https://github.com/chiarazetaa)
+- Email: ychiara.zuffi19@gmail.com
+- GitHub: [https://github.com/chiarazetaa/](https://github.com/chiarazetaa/)
