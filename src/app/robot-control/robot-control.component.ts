@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-robot-control',
@@ -14,10 +14,47 @@ export class RobotControlComponent {
 
   constructor() { }
 
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (!this.robotPlaced) return; // ignore keyboard events if the robot is not placed
+
+    switch (event.key) {
+      case 'ArrowUp':
+        this.direction = 'NORTH';
+        this.moveRobot();
+        break;
+      case 'ArrowLeft':
+        this.direction = 'WEST';
+        this.moveRobot();
+        break;
+      case 'ArrowRight':
+        this.direction = 'EAST';
+        this.moveRobot();
+        break;
+      case 'ArrowDown':
+        this.direction = 'SOUTH';
+        this.moveRobot();
+        break;
+      default:
+        break;
+    }
+  }
+
   placeRobot() {
     // place the robot in the first position (0, 0, NORTH) 
-    let position = { x: this.x, y: this.y, direction: this.direction };
-    console.log('Robot placed successfully', position);
+    if (this.robotPlaced) {
+      // the robot is already placed, reset its position and direction
+      this.x = 0;
+      this.y = 0;
+      this.direction = 'NORTH';
+      console.log('Robot re-placed at (0, 0, NORTH)');
+    } else {
+      // the robot is not yet placed, set its initial position and direction
+      this.x = this.x;
+      this.y = this.y;
+      this.direction = this.direction;
+      console.log('Robot placed successfully at', { x: this.x, y: this.y, direction: this.direction });
+    }
     this.robotPlaced = true;
   }
 
