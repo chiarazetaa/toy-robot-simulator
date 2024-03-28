@@ -2,7 +2,12 @@
 <div class="container">
     <div class="table">
         <div class="robot" *ngIf="robotPlaced" [style.left.px]="x * 50" [style.bottom.px]="y * 50">
-            <span class="direction">{{ direction }}</span>
+            <span class="direction">
+                <span *ngIf="direction === 'NORTH'"><i class="fa fa-arrow-up"></i></span>
+                <span *ngIf="direction === 'SOUTH'"><i class="fa fa-arrow-down"></i></span>
+                <span *ngIf="direction === 'EAST'"><i class="fa fa-arrow-right"></i></span>
+                <span *ngIf="direction === 'WEST'"><i class="fa fa-arrow-left"></i></span>
+            </span>
         </div>
     </div>
     <div class="controls">
