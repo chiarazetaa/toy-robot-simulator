@@ -16,13 +16,18 @@
         </div>
         <div class="commands">
             <label>Direction:</label>
-            <input type="text" [(ngModel)]="direction" />
+            <select [(ngModel)]="direction">
+                <option value="NORTH">NORTH</option>
+                <option value="SOUTH">SOUTH</option>
+                <option value="EAST">EAST</option>
+                <option value="WEST">WEST</option>
+            </select>
         </div>
         <button (click)="placeRobot()">Place Robot</button>
-        <button (click)="moveRobot()" *ngIf="robotPlaced">Move Robot</button><br>
-        <button (click)="turnLeft()" *ngIf="robotPlaced">Turn Left</button>
-        <button (click)="turnRight()" *ngIf="robotPlaced">Turn Right</button>
-        <button (click)="getReport()" *ngIf="robotPlaced">Report</button>
+        <button (click)="moveRobot()" [disabled]="!robotPlaced">Move Robot</button><br>
+        <button (click)="turnLeft()" [disabled]="!robotPlaced">Turn Left</button>
+        <button (click)="turnRight()" [disabled]="!robotPlaced">Turn Right</button>
+        <button (click)="getReport(x, y, direction)" [disabled]="!robotPlaced">Report</button>
     </div>
 </div>
 <div *ngIf="report">

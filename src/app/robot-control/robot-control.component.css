@@ -5,6 +5,7 @@
     background-color: #abdcea;
     padding: 2em;
     height: 400px;
+    width: 800px;
 }
 
 .table {
@@ -49,11 +50,17 @@ button:hover {
     box-shadow: 0 0 0 5px #000000, inset 0 0 0 1px #fff;
 }
 
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 .commands {
     margin: 10px 15px;
 }
 
-input {
+input, select {
     padding: 0.1em;
     font-family: "VT323", monospace;
     font-size: x-large;
