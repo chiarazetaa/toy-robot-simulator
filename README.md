@@ -1,27 +1,48 @@
-# ToyRobotSimulator
+# Toy Robot Simulator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.
+A simple Angular application simulating a toy robot moving on a tabletop.
 
-## Development server
+## Setup and Run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Prerequisites
+#### Node.js
+- Ensure you have Node.js installed on your machine. You can download it from [Node.js official website](https://nodejs.org/).
+- Recommended version: 18.16.0.
+#### npm (Node Package Manager)
+- The project uses npm for managing dependencies. Verify that npm is installed with your Node.js installation.
+#### Angular CLI
+- The project uses Angular for the frontend. Install Angular CLI globally by running: `npm install -g @angular/cli`
+- Recommended version: 16.2.12.
 
-## Code scaffolding
+### Installation
+1. Clone the repository: `git clone https://github.com/chiarazetaa/toy-robot-simulator.git`
+2. Navigate to the project directory: `cd toy-robot-simulator`
+3. Install dependencies: `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Run the Application
+1. Start the Angular frontend:
+   - Run the Angular development server: `ng serve`
+   - Open your web browser and go to [http://localhost:4200/](http://localhost:4200/)
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Place the toy robot on the tabletop at a specified position (X, Y) and facing a direction (NORTH, SOUTH, EAST, WEST).
+- Move the robot one unit forward in the direction it is currently facing.
+- Rotate the robot 90 degrees to the left or right without changing its position.
+- Display the current position (X, Y) and facing direction of the robot.
 
-## Running unit tests
+### How to Interact
+- Use the input fields to specify the X and Y coordinates, and select the facing direction from the dropdown.
+- Click on "Place Robot" to place the robot on the tabletop.
+- Use the buttons "Move Robot", "Turn Left", and "Turn Right" to move and rotate the robot.
+- Click on "Report" to display the current position and facing direction of the robot.
+- Alternatively, use the arrow keys on your keyboard to move the robot (Arrow Up: NORTH, Arrow Left: WEST, Arrow Right: EAST, Arrow Down: SOUTH).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+- Angular: Frontend framework for building interactive web applications.
+- HTML/CSS: Markup and styling languages for building web interfaces.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact Information
+Your Name
+- Email: your-email@example.com
+- GitHub: [Your GitHub Profile](https://github.com/chiarazetaa)
