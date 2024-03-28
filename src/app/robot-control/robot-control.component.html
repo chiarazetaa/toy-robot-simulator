@@ -13,11 +13,11 @@
     <div class="controls">
         <div class="commands">
             <label>X:</label>
-            <input type="number" [(ngModel)]="x" />
+            <input type="number" [(ngModel)]="x" (ngModelChange)="onCoordinateChange()" />
         </div>
         <div class="commands">
             <label>Y:</label>
-            <input type="number" [(ngModel)]="y" />
+            <input type="number" [(ngModel)]="y" (ngModelChange)="onCoordinateChange()" />
         </div>
         <div class="commands">
             <label>Direction:</label>
