@@ -44,5 +44,5 @@ A simple Angular application simulating a toy robot moving on a tabletop.
 
 ## Contact Information
 Your Name
-- Email: ychiara.zuffi19@gmail.com
+- Email: chiara.zuffi19@gmail.com
 - GitHub: [https://github.com/chiarazetaa/](https://github.com/chiarazetaa/)
