@@ -7,12 +7,12 @@ A simple Angular application simulating a toy robot moving on a tabletop.
 ### Prerequisites
 #### Node.js
 - Ensure you have Node.js installed on your machine. You can download it from [Node.js official website](https://nodejs.org/).
-- Recommended version: 18.16.0.
+- Recommended version: 20.14.0.
 #### npm (Node Package Manager)
 - The project uses npm for managing dependencies. Verify that npm is installed with your Node.js installation.
 #### Angular CLI
 - The project uses Angular for the frontend. Install Angular CLI globally by running: `npm install -g @angular/cli`
-- Recommended version: 16.2.12.
+- Recommended version: 18.0.4.
 
 ### Installation
 1. Clone the repository: `git clone https://github.com/chiarazetaa/toy-robot-simulator.git`
