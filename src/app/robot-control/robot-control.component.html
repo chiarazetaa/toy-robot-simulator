@@ -1,41 +1,53 @@
 <p>Place and move the robot</p>
 <div class="container">
-    <div class="table">
-        <div class="robot" *ngIf="robotPlaced" [style.left.px]="x * 50" [style.bottom.px]="y * 50">
-            <span class="direction">
-                <span *ngIf="direction === 'NORTH'"><i class="fa fa-arrow-up"></i></span>
-                <span *ngIf="direction === 'SOUTH'"><i class="fa fa-arrow-down"></i></span>
-                <span *ngIf="direction === 'EAST'"><i class="fa fa-arrow-right"></i></span>
-                <span *ngIf="direction === 'WEST'"><i class="fa fa-arrow-left"></i></span>
-            </span>
-        </div>
+  <div class="table">
+    @if (robotPlaced) {
+      <div class="robot" [style.left.px]="x * 50" [style.bottom.px]="y * 50">
+        <span class="direction">
+          @if (direction === 'NORTH') {
+            <span><i class="fa fa-arrow-up"></i></span>
+          }
+          @if (direction === 'SOUTH') {
+            <span><i class="fa fa-arrow-down"></i></span>
+          }
+          @if (direction === 'EAST') {
+            <span><i class="fa fa-arrow-right"></i></span>
+          }
+          @if (direction === 'WEST') {
+            <span><i class="fa fa-arrow-left"></i></span>
+          }
+        </span>
+      </div>
+    }
+  </div>
+  <div class="controls">
+    <div class="commands">
+      <label>X:</label>
+      <input type="number" [(ngModel)]="x" (ngModelChange)="onCoordinateChange()" />
     </div>
-    <div class="controls">
-        <div class="commands">
-            <label>X:</label>
-            <input type="number" [(ngModel)]="x" (ngModelChange)="onCoordinateChange()" />
-        </div>
-        <div class="commands">
-            <label>Y:</label>
-            <input type="number" [(ngModel)]="y" (ngModelChange)="onCoordinateChange()" />
-        </div>
-        <div class="commands">
-            <label>Direction:</label>
-            <select [(ngModel)]="direction">
-                <option value="NORTH">NORTH</option>
-                <option value="SOUTH">SOUTH</option>
-                <option value="EAST">EAST</option>
-                <option value="WEST">WEST</option>
-            </select>
-        </div>
-        <button (click)="placeRobot()">Place Robot</button>
-        <button (click)="moveRobot()" [disabled]="!robotPlaced">Move Robot</button><br>
-        <button (click)="turnLeft()" [disabled]="!robotPlaced">Turn Left</button>
-        <button (click)="turnRight()" [disabled]="!robotPlaced">Turn Right</button>
-        <button (click)="getReport(x, y, direction)" [disabled]="!robotPlaced">Report</button>
+    <div class="commands">
+      <label>Y:</label>
+      <input type="number" [(ngModel)]="y" (ngModelChange)="onCoordinateChange()" />
     </div>
+    <div class="commands">
+      <label>Direction:</label>
+      <select [(ngModel)]="direction">
+        <option value="NORTH">NORTH</option>
+        <option value="SOUTH">SOUTH</option>
+        <option value="EAST">EAST</option>
+        <option value="WEST">WEST</option>
+      </select>
+    </div>
+    <button (click)="placeRobot()">Place Robot</button>
+    <button (click)="moveRobot()" [disabled]="!robotPlaced">Move Robot</button><br>
+    <button (click)="turnLeft()" [disabled]="!robotPlaced">Turn Left</button>
+    <button (click)="turnRight()" [disabled]="!robotPlaced">Turn Right</button>
+    <button (click)="getReport(x, y, direction)" [disabled]="!robotPlaced">Report</button>
+  </div>
 </div>
-<div *ngIf="report">
+@if (report) {
+  <div>
     <p>Robot Position: {{ report.x }}, {{ report.y }}</p>
     <p>Robot Direction: {{ report.direction }}</p>
-</div>
+  </div>
+}
