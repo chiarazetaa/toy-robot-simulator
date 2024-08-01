@@ -22,7 +22,7 @@ A simple Angular application simulating a toy robot moving on a tabletop.
 ### Run the Application
 1. Start the Angular frontend:
    - Run the Angular development server: `ng serve`
-   - Open your web browser and go to [http://localhost:4200/](http://localhost:4200/)
+   - Open your web browser and go to http://localhost:4200/
 
 ## Features
 
