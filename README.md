@@ -43,6 +43,7 @@ A simple Angular application simulating a toy robot moving on a tabletop.
 - HTML/CSS: Markup and styling languages for building web interfaces.
 
 ## Contact Information
-Your Name
+Chiara Zuffi
 - Email: chiara.zuffi19@gmail.com
-- GitHub: [https://github.com/chiarazetaa/](https://github.com/chiarazetaa/)
+- GitHub: https://github.com/chiarazetaa
+- LinkedIn: https://www.linkedin.com/in/zuffichiara/
